@@ -35,7 +35,7 @@ delete require.cache[__filename]
 const parentFile = module.parent.filename
 const parentDir = path.dirname(parentFile)
 
-export default (dir, opts) => {
+module.exports = (dir, opts) => {
   dir = path.resolve(parentDir, dir || '')
   opts = Object.assign({ camelize: true }, opts)
 
